@@ -9,7 +9,7 @@ sap.ui.define([
 	return Controller.extend("com.inbc.scp-fundamentos.controller.Master", {
 		onInit: function () {
 			this._loadModels();
-			this._loadControls();
+			this._loadControls(); 
 		},
 		
 		_loadModels: function(){
