@@ -1,0 +1,19 @@
+{
+	"week":[
+		{
+			"we_day": "Monday",
+			"we_comment": "Giren says: I hate Mondays!",
+			"we_ranting": 4
+		},
+		{
+			"we_day": "Tuesday",
+			"we_comment": "At least it´s not monday",
+			"we_ranting": 1
+		},
+		{
+			"we_day": "Wednesday",
+			"we_comment": "Better known as hump day",
+			"we_ranting": 3
+		}
+	]
+}

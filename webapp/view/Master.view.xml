@@ -1,9 +1,35 @@
-<mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:t="sap.ui.table">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content></content>
+					<content>
+						<t:Table id="tblWeekend" 
+								 title="Comentarios Semanales" 
+								 selectionMode="None"
+								 visibleRowCount="3">
+							<t:columns>
+								<t:Column width="150px">
+									<Label text="Día"/>
+									<t:template>
+										<Text text="{we_day}"/>
+									</t:template>
+								</t:Column>
+								<t:Column width="300px">
+									<Label text="Comentario"/>
+									<t:template>
+										<Text text="{we_comment}"/>
+									</t:template>
+								</t:Column>
+								<t:Column width="auto">
+									<Label text="Raiting"/>
+									<t:template>
+										<RatingIndicator maxValue="5" value="{we_ranting}"/>
+									</t:template>
+								</t:Column>
+							</t:columns>
+						</t:Table>
+					</content>
 				</Page>
 			</pages>
 		</App>
