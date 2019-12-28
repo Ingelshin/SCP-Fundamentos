@@ -4,23 +4,24 @@ sap.ui.define([
 ], function (Controller, JSONModel) {
 	"use strict";
 	
-	var oModel;
 	
 	return Controller.extend("com.inbc.scp-fundamentos.controller.Master", {
 		onInit: function () {
 			this._loadModels();
+			this._loadData();
 			this._loadControls(); 
 		},
 		
 		_loadModels: function(){
-			oModel = new JSONModel();
-			oModel.loadData("mockdata/week.json");
+			
+		},
+		
+		_loadData: function(){
+			
 		},
 		
 		_loadControls: function(){
-			var oTable = this.byId("tblWeekend");
-			oTable.setModel(oModel);
-			oTable.bindRows("/week");
+		
 		}
 		
 	});
