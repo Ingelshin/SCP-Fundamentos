@@ -7,7 +7,7 @@
 						<t:Table id="tblWeekend" 
 								 title="Comentarios Semanales" 
 								 selectionMode="None"
-								 visibleRowCount="3">
+								 visibleRowCount="{/nRowToShow}">
 							<t:columns>
 								<t:Column width="150px">
 									<Label text="Día"/>

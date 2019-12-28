@@ -22,5 +22,6 @@ sap.ui.define([
 			oTable.setModel(oModel);
 			oTable.bindRows("/week");
 		}
+		
 	});
 });
