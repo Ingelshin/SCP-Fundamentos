@@ -17,6 +17,15 @@ sap.ui.define([
 				
 			});
 			return oModel;
+		},
+		
+		createPersonModel: function() {
+			var oModel = new JSONModel({
+				id: 0,
+				name: "",
+				lastname: ""
+			});
+			return oModel;
 		}
 
 	};

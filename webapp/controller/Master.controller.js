@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (Controller, JSONModel, Base, MessageCustom) {
 	"use strict";
 	
-	// var mHelp;
+	var mPerson;
 	
 	return Base.extend("com.inbc.scp-fundamentos.controller.Master", {
 		onInit: function () {
@@ -16,7 +16,7 @@ sap.ui.define([
 		},
 		
 		_loadModels: function(){
-			
+			mPerson = this.getModel("personModel");
 		},
 		
 		_loadData: function(){
@@ -24,7 +24,23 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
-			MessageCustom.showConfirmation("Hola", this._loadModels);
+			MessageCustom.showConfirmation("Hola", this._loadData);
+		},
+		
+		_resetModelPerson: function(){
+			var oModel = new JSONModel();
+			return new Promise(function(resolve, reject){
+				oModel.loadData("mockdata/person.json");
+				oModel.attachRequestCompleted(function(){
+					resolve(oModel.getData());
+				});
+			});
+		},
+		
+		onPressSave: function(oEvent){
+			this._resetModelPerson().then(function(oData){
+				mPerson.setData(oData);
+			});
 		}
 		
 	});

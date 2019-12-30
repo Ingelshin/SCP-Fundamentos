@@ -23,6 +23,9 @@ sap.ui.define([
 			
 			// set the help model
 			this.setModel(models.createHelpModel(), "helpModel");
+			
+			// set the person model
+			this.setModel(models.createPersonModel(), "personModel");
 		}
 	});
 });

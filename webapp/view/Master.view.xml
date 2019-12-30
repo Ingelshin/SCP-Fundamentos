@@ -1,13 +1,42 @@
-<mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content>
-				
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+<mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form">
+	<App id="app">
+		<pages>
+			<Page id="page" title="{i18n>title}">
+				<content>
+					<f:Form>
+						<f:layout>
+							<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="3"
+								emptySpanL="3" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+						</f:layout>
+						<f:FormContainer>
+							<f:formElements>
+								<f:FormElement label="Código de Usuario">
+									<f:fields>
+										<Input value="{personModel>/id}"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Nombres">
+									<f:fields>
+										<Input value="{personModel>/name}"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Apellidos">
+									<f:fields>
+										<Input value="{personModel>/lastname}"/>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:Form>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Button type="Accept" text="Guardar" press="onPressSave"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>

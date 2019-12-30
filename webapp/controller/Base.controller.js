@@ -7,7 +7,7 @@ sap.ui.define([
 	return Controller.extend("com.inbc.scp-fundamentos.controller.Base.controller", {
 		
 		getModel: function (sModel) {
-			var oModel = this.getView().getModel(sModel);
+			var oModel = this.getOwnerComponent().getModel(sModel);
 			return oModel;
 		}
 		
