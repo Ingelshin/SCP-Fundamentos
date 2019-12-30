@@ -24,7 +24,7 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
-			MessageCustom.showConfirmation("Hola", this._loadData);
+		
 		},
 		
 		_resetModelPerson: function(){
