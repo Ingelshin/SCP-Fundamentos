@@ -14,7 +14,20 @@ sap.ui.define([
 		
 		createHelpModel: function() {
 			var oModel = new JSONModel({
-				
+				Categories: [
+					{
+						id: 1,
+						name: "Centers Junior"
+					},
+					{
+						id: 2,
+						name: "Centers Developers"
+					},
+					{
+						id: 3,
+						name: "Centers Developer Leader"
+					}
+				]
 			});
 			return oModel;
 		},
@@ -23,7 +36,8 @@ sap.ui.define([
 			var oModel = new JSONModel({
 				id: 0,
 				name: "",
-				lastname: ""
+				lastname: "",
+				idCategory: 0
 			});
 			return oModel;
 		}

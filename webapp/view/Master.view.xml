@@ -1,5 +1,5 @@
 <mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
-	xmlns:f="sap.ui.layout.form">
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
 	<App id="app">
 		<pages>
 			<Page id="page" title="{i18n>title}">
@@ -24,6 +24,16 @@
 								<f:FormElement label="Apellidos">
 									<f:fields>
 										<Input value="{personModel>/lastname}"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Categoría">
+									<f:fields>
+										<ComboBox  
+											  selectedKey="{personModel>/idCategory}" 
+											  items="{helpModel>/Categories}"
+											  placeholder="Seleccione Categoría">
+											<core:Item key="{helpModel>id}" text="{helpModel>name}" />
+										</ComboBox>
 									</f:fields>
 								</f:FormElement>
 							</f:formElements>
