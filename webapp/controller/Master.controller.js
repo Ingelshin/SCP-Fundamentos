@@ -12,7 +12,7 @@ sap.ui.define([
 		onInit: function () {
 			this._loadModels();
 			this._loadData();
-			this._loadControls(); 
+			this._loadControls();
 		},
 		
 		_loadModels: function(){
