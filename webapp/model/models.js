@@ -14,6 +14,14 @@ sap.ui.define([
 		
 		createHelpModel: function() {
 			var oModel = new JSONModel({
+				root: {}
+			});
+			return oModel;
+		},
+		
+		// Modelo para asignación de constantes y HardCodes
+		createConstModel: function() {
+			var oModel = new JSONModel({
 				
 			});
 			return oModel;
