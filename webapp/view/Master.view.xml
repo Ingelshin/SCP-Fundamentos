@@ -6,7 +6,6 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-						<!--<in:ProductRating class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>-->
 						<f:Form>
 							<f:layout>
 								<f:ResponsiveGridLayout columnsL="2"/>
