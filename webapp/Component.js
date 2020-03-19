@@ -25,6 +25,13 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-		}
+		},
+		
+		setPathImage: function() {
+			var oRootPath = jQuery.sap.getModulePath("com.inbc.scp-fundamentos");
+			var oData = this.getModel("HelpModel").getData();
+			oData.root = oRootPath;
+		},
+
 	});
 });
