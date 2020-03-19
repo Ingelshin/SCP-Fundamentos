@@ -22,15 +22,19 @@ sap.ui.define([
 			this.setModel(models.createDeviceModel(), "device");
 			
 			// set the help model
-			this.setModel(models.createHelpModel(), "helpModel");
+			this.setModel(models.createHelpModel(), "help");
+			
+			// set the model constantes
+			this.setModel(models.createConstModel(), "const");
 			
 			// get root path
 			this.getRootPath();
 		},
 		
+		// Obtiene el Roth del proyecto
 		getRootPath: function() {
 			var oRootPath = jQuery.sap.getModulePath("com.inbc.scp-fundamentos");
-			var oData = this.getModel("helpModel").getData();
+			var oData = this.getModel("help").getData();
 			oData.root = oRootPath;
 		}
 	});

@@ -1,9 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"./Base.controller",
-	"../components/Message.custom"
-], function (Controller, JSONModel, Base, MessageCustom) {
+	"./Base.controller"
+], function (Controller, JSONModel, Base) {
 	"use strict";
 	
 	// var mHelp;
@@ -24,7 +23,7 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
-			MessageCustom.showConfirmation("Hola", this._loadModels);
+			
 		}
 		
 	});
