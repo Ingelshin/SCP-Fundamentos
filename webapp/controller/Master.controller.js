@@ -23,7 +23,13 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
-			
+			let oFilter = this.getView().byId("idFilterDemo");      
+			oFilter.addEventDelegate({
+				"onAfterRendering": function(oEvent) {
+					var oButton = oEvent.srcControl._oSearchButton;
+					debugger 
+				}
+			});
 		}
 		
 	});

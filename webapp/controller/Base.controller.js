@@ -9,6 +9,10 @@ sap.ui.define([
 		getModel: function (sModel) {
 			var oModel = this.getView().getModel(sModel);
 			return oModel;
+		},
+		
+		_byId: function (sId){
+			
 		}
 		
 	});
