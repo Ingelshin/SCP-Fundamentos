@@ -1,33 +1,12 @@
 <mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master"
 		  xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
-		  xmlns:in="com.inbc.scp-fundamentos.control">
+		  xmlns:in="com.inbc.scp-fundamentos.control" >
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-						<!--<in:ProductRating class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>-->
-						<f:Form>
-							<f:layout>
-								<f:ResponsiveGridLayout columnsL="2"/>
-							</f:layout>
-							<f:formContainers>
-								<f:FormContainer>
-									<f:FormElement>
-										<HBox alignContent="Center">
-											<Image src="{helpModel>/root}/image/Everis.png"/>
-										</HBox>
-									</f:FormElement>
-								</f:FormContainer>
-								<f:FormContainer>
-									<f:FormElement>
-										<HBox alignContent="Center">
-											<Image src="{helpModel>/root}/image/Everis.png"/>
-										</HBox>
-									</f:FormElement>
-								</f:FormContainer>
-							</f:formContainers>
-						</f:Form>
+					
 					</content>
 				</Page>
 			</pages>
