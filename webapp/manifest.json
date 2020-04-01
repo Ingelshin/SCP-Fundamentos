@@ -41,6 +41,9 @@
   },
   "sap.ui5": {
     "flexEnabled": false,
+    "config": {
+    	"fullWidth": true	
+    },
     "rootView": {
       "viewName": "com.inbc.scp-fundamentos.view.Master",
       "type": "XML",

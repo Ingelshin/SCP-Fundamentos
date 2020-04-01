@@ -22,7 +22,7 @@ sap.ui.define([
 		// Modelo para asignación de constantes y HardCodes
 		createConstModel: function() {
 			var oModel = new JSONModel({
-				
+				aParametersUrl: {}  //Array de parametros enviados por la url
 			});
 			return oModel;
 		}

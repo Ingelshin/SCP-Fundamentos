@@ -29,13 +29,22 @@ sap.ui.define([
 			
 			// get root path
 			this.getRootPath();
+			
+			// retrieve the parameters send by url 
+			this.recoverParameters();
+			
 		},
 		
 		// Obtiene el Roth del proyecto
 		getRootPath: function() {
 			var oRootPath = jQuery.sap.getModulePath("com.inbc.scp-fundamentos");
-			var oData = this.getModel("help").getData();
-			oData.root = oRootPath;
+			var oData	  = this.getModel("help").getData();
+			oData.root	  = oRootPath;
+		},
+		
+		recoverParameters: function(){
+			var oData			 = this.getModel("const").getData();
+			oData.aParametersUrl = this.getComponentData().startupParameters;
 		}
 	});
 });
