@@ -1,0 +1,7 @@
+<core:FragmentDefinitio	controllerName="com.inbc.scp-fundamentos.controller.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+
+
+
+</core:FragmentDefinition>
