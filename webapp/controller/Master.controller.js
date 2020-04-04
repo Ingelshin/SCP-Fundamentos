@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"./Base.controller"
-], function (Controller, JSONModel, Base) {
+	"com/inbc/scp-fundamentos/controller/Base.controller",
+	"sap/m/MessageToast"
+], function (Controller, JSONModel, Base, MessageToast) {
 	"use strict";
 	
 	var mGeneral;
@@ -16,7 +17,7 @@ sap.ui.define([
 		},
 		
 		onAfterRendering: function(){
-			debugger
+		
 		},
 		
 		_loadModels: function(){
@@ -28,12 +29,18 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
-			
+			var oRouter = this.getRouter();
+			oRouter.attachRouteMatched(this.handleRouteMatched, this);
 		},
 		
-		onPress: function() {
-			
-		}
+		onPressNavigate: function() {
+			this.getView().unbindElement();
+			this.getRouter().navTo("employeeList");
+		},
 		
+		handleRouteMatched: function(oEvent){
+			// Ejecuta cada que hacemos una navegación
+			MessageToast.show("Navegaste");
+		}
 	});
 });

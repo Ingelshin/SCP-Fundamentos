@@ -1,116 +1,131 @@
 {
-  "_version": "1.12.0",
-  "sap.app": {
-    "id": "com.inbc.scp-fundamentos",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "1.0.0"
-    },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "sourceTemplate": {
-      "id": "servicecatalog.connectivityComponentForManifest",
-      "version": "0.0.0"
-    },
-    "dataSources": {
-      "ZSCP_MULTISISTEMA_SRV_01": {
-        "uri": "/sap/opu/odata/sap/ZSCP_MULTISISTEMA_SRV_01/",
-        "type": "OData",
-        "settings": {
-          "localUri": "localService/metadata.xml"
-        }
-      }
-    },
-    "crossNavigation": {
-      "inbounds": {}
-    }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": false,
-    "config": {
-      "fullWidth": true
-    },
-    "rootView": {
-      "viewName": "com.inbc.scp-fundamentos.view.App",
-      "type": "XML",
-      "async": true,
-      "id": "App"
-    },
-    "dependencies": {
-      "minUI5Version": "1.65.6",
-      "libs": {
-        "sap.ui.layout": {},
-        "sap.ui.core": {},
-        "sap.m": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "com.inbc.scp-fundamentos.i18n.i18n"
-        }
-      },
-      "": {
-        "type": "sap.ui.model.odata.v2.ODataModel",
-        "settings": {
-          "defaultOperationMode": "Server",
-          "defaultBindingMode": "OneWay",
-          "defaultCountMode": "Request",
-          "useBatch": true
-        },
-        "dataSource": "ZSCP_MULTISISTEMA_SRV_01",
-        "preload": true
-      }
-    },
-    "resources": {
-      "css": [{
-        "uri": "css/style.css"
-      }]
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "viewPath": "com.inbc.scp-fundamentos.view",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "clearControlAggregation": false
-      },
-      "routes": [{
-        "pattern": "",
-        "name": "appMaster",
-        "target": "master"
-      }],
-      "targets": {
-        "master": {
-          "viewName": "Master",
-          "viewType": "XML",
-          "viewLevel": 1
-        }
-      }
-    }
-  }
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.inbc.scp-fundamentos",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZSCP_MULTISISTEMA_SRV_01": {
+				"uri": "/sap/opu/odata/sap/ZSCP_MULTISISTEMA_SRV_01/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"crossNavigation": {
+			"inbounds": {}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"config": {
+			"fullWidth": false
+		},
+		"rootView": {
+			"viewName": "com.inbc.scp-fundamentos.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.inbc.scp-fundamentos.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": true
+				},
+				"dataSource": "ZSCP_MULTISISTEMA_SRV_01",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.inbc.scp-fundamentos.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "appMaster",
+					"target": "master"
+				},
+				{
+					"pattern": "employees",
+					"name": "employeeList",
+					"target": "employees"
+				}
+			],
+			"targets": {
+				"master": {
+					"viewName": "Master",
+					"viewType": "XML",
+					"viewLevel": 1
+				},
+				"employees": {
+					"viewType": "XML",
+					"viewPath": "com.inbc.scp-fundamentos.view.employee",
+					"viewName": "employeeList",
+					"viewLevel": 2
+				}
+			}
+		}
+	}
 }
