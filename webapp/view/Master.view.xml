@@ -1,15 +1,18 @@
 <mvc:View controllerName="com.inbc.scp-fundamentos.controller.Master"
-		  xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+		  xmlns:mvc="sap.ui.core.mvc" 
+		  displayBlock="true" 
+		  xmlns="sap.m"
 		  xmlns:in="com.inbc.scp-fundamentos.control">
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content>
-						
-					</content>
-				</Page>
-			</pages>
+
+		<App>
+			<Page id="page" title="{i18n>title}">
+				<content>
+					
+				</content>
+				<footer>
+					
+				</footer>
+			</Page>
 		</App>
-	</Shell>
+
 </mvc:View>

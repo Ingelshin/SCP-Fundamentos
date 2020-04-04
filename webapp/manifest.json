@@ -21,6 +21,9 @@
           "localUri": "localService/metadata.xml"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {}
     }
   },
   "sap.ui": {
@@ -42,13 +45,13 @@
   "sap.ui5": {
     "flexEnabled": false,
     "config": {
-    	"fullWidth": true	
+      "fullWidth": true
     },
     "rootView": {
-      "viewName": "com.inbc.scp-fundamentos.view.Master",
+      "viewName": "com.inbc.scp-fundamentos.view.App",
       "type": "XML",
       "async": true,
-      "id": "Master"
+      "id": "App"
     },
     "dependencies": {
       "minUI5Version": "1.65.6",
@@ -97,17 +100,15 @@
         "clearControlAggregation": false
       },
       "routes": [{
-        "name": "RouteMaster",
-        "pattern": "RouteMaster",
-        "target": ["TargetMaster"]
+        "pattern": "",
+        "name": "appMaster",
+        "target": "master"
       }],
       "targets": {
-        "TargetMaster": {
+        "master": {
+          "viewName": "Master",
           "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "Master",
-          "viewName": "Master"
+          "viewLevel": 1
         }
       }
     }

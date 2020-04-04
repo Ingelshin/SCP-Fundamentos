@@ -8,10 +8,15 @@ sap.ui.define([
 	var mGeneral;
 	
 	return Base.extend("com.inbc.scp-fundamentos.controller.Master", {
+		
 		onInit: function () {
 			this._loadModels();
-			this._loadData();
 			this._loadControls();
+			this._loadData();
+		},
+		
+		onAfterRendering: function(){
+			debugger
 		},
 		
 		_loadModels: function(){
@@ -23,6 +28,10 @@ sap.ui.define([
 		},
 		
 		_loadControls: function(){
+			
+		},
+		
+		onPress: function() {
 			
 		}
 		
