@@ -39,8 +39,10 @@ sap.ui.define([
 		},
 		
 		handleRouteMatched: function(oEvent){
-			// Ejecuta cada que hacemos una navegación
-			MessageToast.show("Navegaste");
+			var sName = oEvent.getParameter("name");
+			if (sName === "appMaster"){
+				MessageToast.show("Página Maestra");
+			}
 		}
 	});
 });
