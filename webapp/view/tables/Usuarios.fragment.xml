@@ -2,13 +2,24 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core"
 	xmlns:t="sap.ui.table">
-	<t:Table rows="{/MUsersSet}"
+	<t:Table id="tblUsuario"
+			 rows="{/MUsersSet}"
 			 columnHeaderHeight="50"
 			 visibleRowCount="5">
+		<t:rowSettingsTemplate>
+    		<t:RowSettings highlight="{= ${Stat2} === '1' ? 'Success' : 'Error'}"/>
+		</t:rowSettingsTemplate>
 		<t:columns>
 			<t:Column label="Estado">
 				<t:template>
-					<ObjectStatus text="{Stat2}"/>
+					<Text text="{Name}" />
+				</t:template>
+			</t:Column>
+			<t:Column label="Estado">
+				<t:template>
+					<ObjectStatus text="{= ${Stat2} === '1' ? 'Activo' : 'Inactivo'}"
+								  icon="{= ${Stat2} === '1' ? 'sap-icon://status-positive' :'sap-icon://status-negative'}"
+								  state="{= ${Stat2} === '1' ? 'Success' : 'Error'}"/>
 				</t:template>
 			</t:Column>
 		</t:columns>

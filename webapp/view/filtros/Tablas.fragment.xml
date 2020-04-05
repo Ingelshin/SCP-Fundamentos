@@ -1,0 +1,25 @@
+<core:FragmentDefinition controllerName="com.inbc.scp-fundamentos.controller.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.comp.filterbar">
+	<f:FilterBar id="idFilterTable"
+				 search="onPressFilter">
+		
+		<f:filterGroupItems>
+			<f:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Estado" visibleInFilterBar="true">
+				<f:control>
+					<Input value="{help>/filters/Stat2}" placeholder="Ingrese Estado"/>
+				</f:control>
+			</f:FilterGroupItem>
+		</f:filterGroupItems>
+		
+		<f:filterGroupItems>
+			<f:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Nombres" visibleInFilterBar="true">
+				<f:control>
+					<Input value="{help>/filters/Name}" placeholder="Ingrese Nombre"/>
+				</f:control>
+			</f:FilterGroupItem>
+		</f:filterGroupItems>
+		
+	</f:FilterBar>
+</core:FragmentDefinition>

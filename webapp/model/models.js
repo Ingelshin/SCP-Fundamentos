@@ -14,7 +14,10 @@ sap.ui.define([
 		
 		createHelpModel: function() {
 			var oModel = new JSONModel({
-				root: {}
+				root: {},
+				filters: {
+					Stat2: ""	
+				}
 			});
 			return oModel;
 		},
