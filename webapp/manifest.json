@@ -18,7 +18,7 @@
         "uri": "/sap/opu/odata/sap/ZSCP_MULTISISTEMA_SRV_01/",
         "type": "OData",
         "settings": {
-          "localUri": "localService/metadata.xml"
+          "localUri": "localService/ZSCP_MULTISISTEMA_SRV_01/metadata.xml"
         }
       }
     },
@@ -75,8 +75,8 @@
       "": {
         "type": "sap.ui.model.odata.v2.ODataModel",
         "settings": {
-          "defaultOperationMode": "Server",
-          "defaultBindingMode": "OneWay",
+          "defaultOperationMode": "Client",
+          "defaultBindingMode": "TwoWay",
           "defaultCountMode": "Request",
           "useBatch": true
         },

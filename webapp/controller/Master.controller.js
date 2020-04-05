@@ -16,7 +16,6 @@ sap.ui.define([
 		},
 		
 		onAfterRendering: function(){
-			debugger
 		},
 		
 		_loadModels: function(){
