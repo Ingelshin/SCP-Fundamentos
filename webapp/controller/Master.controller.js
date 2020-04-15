@@ -3,8 +3,9 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"com/inbc/scp-fundamentos/controller/Base.controller",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
-], function (Controller, JSONModel, Base, Filter, FilterOperator) {
+	"sap/ui/model/FilterOperator",
+	"sap/ui/model/Sorter"
+], function (Controller, JSONModel, Base, Filter, FilterOperator, Sorter) {
 	"use strict";
 	
 	//var mGeneral;     // MOdelos de ls servicios
@@ -33,6 +34,26 @@ sap.ui.define([
 		
 		_loadControls: function(){
 			
+		},
+		
+		onPressOrder: function(){
+			var aSorts = [];
+			var oTable = this.getView().byId("tblUsuario");
+			var oSort  = new Sorter("Stat2", false);
+			aSorts.push(oSort);
+			oSort  = new Sorter("Name", false);
+			aSorts.push(oSort);
+			oTable.getBinding("rows").sort(aSorts);
+		},
+		
+		onPressOrder2: function(){
+			var aSorts = [];
+			var oTable = this.getView().byId("tblUsuario");
+			var oSort  = new Sorter("Stat2", false);
+			aSorts.push(oSort);
+			oSort  = new Sorter("Name", true);
+			aSorts.push(oSort);
+			oTable.getBinding("rows").sort(aSorts);
 		},
 		
 		onPressFilter: function() {
