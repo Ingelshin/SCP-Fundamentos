@@ -42,9 +42,23 @@ sap.ui.define([
 			oData.root	  = oRootPath;
 		},
 		
+		// Obtiene los parámetros pasados por Url
 		recoverParameters: function(){
 			var oData			 = this.getModel("const").getData();
 			oData.aParametersUrl = this.getComponentData().startupParameters;
+		},
+		
+		// Detecta el dispositivo y ajusta la densidad 
+		getContentDensityClass: function(){
+			if (!this._sContentDensityClass){
+				if(!Device.support.touch){
+					this._sContentDensityClass = "sapUiSizeCompact";
+				}else{
+					this._sContentDensityClass = "sapUiSizeCozy";
+				}
+			}
+			return this._sContentDensityClass;
 		}
+		
 	});
 });
