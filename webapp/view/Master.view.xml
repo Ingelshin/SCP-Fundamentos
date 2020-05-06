@@ -12,6 +12,9 @@
 					<core:Fragment fragmentName="com.inbc.scp-fundamentos.view.filtros.Tablas" type="XML" />
 					<core:Fragment fragmentName="com.inbc.scp-fundamentos.view.tables.Usuarios" type="XML" />
 				</content>
+				<footer>
+					
+				</footer>
 			</Page>
 		</App>
 

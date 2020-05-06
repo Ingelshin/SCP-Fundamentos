@@ -7,7 +7,7 @@
 			 columnHeaderHeight="50"
 			 visibleRowCount="5">
 		<t:rowSettingsTemplate>
-    		<t:RowSettings highlight="{= ${Stat2} === '1' ? 'Success' : 'Error'}"/>
+    		<t:RowSettings highlight="{= ${Stat2} === '1' ? 'Information' : 'Error'}"/>
 		</t:rowSettingsTemplate>
 		<t:columns>
 			<t:Column label="Estado">
@@ -19,10 +19,9 @@
 				<t:template>
 					<ObjectStatus text="{= ${Stat2} === '1' ? 'Activo' : 'Inactivo'}"
 								  icon="{= ${Stat2} === '1' ? 'sap-icon://status-positive' :'sap-icon://status-negative'}"
-								  state="{= ${Stat2} === '1' ? 'Success' : 'Error'}"/>
+								  state="{= ${Stat2} === '1' ? 'Information' : 'Error'}"/>
 				</t:template>
 			</t:Column>
 		</t:columns>
-	
 	</t:Table>
 </core:FragmentDefinition>
